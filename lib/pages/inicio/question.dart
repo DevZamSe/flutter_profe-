@@ -15,7 +15,7 @@ class _InicioState extends State<Inicio> {
       ),
       body: Container(
         child: Column(
-          
+
         ),
       ),
     );

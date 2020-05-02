@@ -11,7 +11,7 @@ class MyApp extends StatelessWidget {
       title: 'Profe Plus App',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.green,
       ),
 //      home: MyHomePage(title: 'Flutter Demo Home Page'),
       home: Login(),

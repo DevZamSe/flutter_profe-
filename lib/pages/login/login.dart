@@ -16,7 +16,7 @@ class _LoginState extends State<Login> {
       body: Container(
         width: size.width,
         height: size.height,
-        decoration: BoxDecoration(color: Colors.green),
+        decoration: BoxDecoration(color: Colors.deepPurple),
         child: SingleChildScrollView(
           child: Container(
             width: size.width,
@@ -52,7 +52,7 @@ class _LoginState extends State<Login> {
               width: double.infinity,
               child: CupertinoButton(
                   padding: EdgeInsets.symmetric(vertical: 18, horizontal: 20),
-                  color: Colors.pinkAccent,
+                  color: Colors.green,
                   borderRadius: BorderRadius.circular(5),
                   onPressed: ()=> Navigator.pushNamed(context, 'example'),
                   child: Text("Inicia Sesión", style: TextStyle(fontSize: size.height*0.02))
@@ -67,12 +67,16 @@ class _LoginState extends State<Login> {
   Widget _forgotPass(Size size){
     final forgot = Container(
       width: size.width,
-      padding: EdgeInsets.only(right: size.width*0.15),
+//      padding: EdgeInsets.only(right: size.width*0.15),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.end,
         crossAxisAlignment: CrossAxisAlignment.end,
         children: <Widget>[
-          Text('Olvidé mi contraseña', style: TextStyle(fontSize: 16))
+          CupertinoButton(
+            child: Text('Olvidé mi contraseña'), 
+            color: Colors.deepPurple,
+            onPressed: () => Navigator.pushNamed(context, 'registro'),),
+//          Text('Olvidé mi contraseña', style: TextStyle(fontSize: 16))
         ],
       ),
     );
@@ -110,8 +114,8 @@ class _LoginState extends State<Login> {
         children: <Widget>[
           InputText(
           inputType: TextInputType.emailAddress,
-            label: 'Correo Electrónico',
-            icon: Icon(Icons.email),
+          label: 'Correo Electrónico',
+          icon: Icon(Icons.email),
             validator: (String text){
               if(text.contains("@")){
     //          _email = text;
@@ -143,7 +147,7 @@ class _LoginState extends State<Login> {
         ],
       ),
       decoration: BoxDecoration(
-        color: Colors.lightGreen,
+        color: Colors.green,
         borderRadius: BorderRadius.circular(15),
         boxShadow: [
           BoxShadow(
